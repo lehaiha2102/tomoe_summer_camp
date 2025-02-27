@@ -1,0 +1,488 @@
+$black: #383838;
+$white: #FFF;
+$gray: #494343;
+$greyish: #979797;
+$darkBlack: #000;
+$grayMedium: #757575;
+$blue: #3f99bb;
+$green: rgb(77, 91, 42);
+$red-btn: rgb(181, 25, 31);
+
+$fs_title_large: 64px;
+$fs_subtitle_large: 18px;
+$fs_title_medium: 48px;
+$fs_subtitle_medium: 16px;
+$fs_title_small: 32px;
+$fs_subtitle_small: 14px;
+$fs_text: 18px;
+
+@media (max-width: 1024px) {
+  // Navigation
+  .navigation {
+    .navigation-wrap {
+      .navigation-left {
+        .logo {
+          a {
+            img {
+              width: 90px;
+              height: 70px;
+            }
+          }
+        }
+      }
+      .navigation-right {
+        .navigation-list {
+          li {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  // Custom Banner
+  .banner {
+    .banner-wrap {
+      left: 0;
+      img{
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  // Custom Banner
+  .banner {
+    height: 650px;
+    .banner-wrap {
+      left: 0;
+      img{
+        max-width: 200px;
+      }
+    }
+  }
+
+  // Title
+  .camping-title{
+    h5{
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
+    h1{
+      font-size: 48px;
+      letter-spacing: 3px;
+    }
+  }
+
+  // Camping info
+  .camping-info{
+    .camping-info-content{
+      flex-direction: column;
+      gap: 20px;
+      .camping-info-left, .camping-info-right{
+        width: 100%;
+      }
+      .camping-info-left{
+        align-items: center;
+      }
+    }
+  }
+
+  // Gallery
+  .camping-gallery{
+    .camping-horizontal-gallery{
+      .camping-image-list{
+        img{
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  // Camping memories
+  .camping-memories{
+  }
+
+  // Promo
+  .background-scroll {
+    min-height: 350px;
+  }
+  .promo-section {
+    .promo-title {
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  // Camping current
+  .camping-current{
+    .camping-current-list {
+      .camping-current-item {
+        .item-content {
+          .item-content-top {
+            h5 {
+              font-size: 16px;
+              letter-spacing: 3px;
+            }
+
+            h3 {
+              font-size: 32px;
+              letter-spacing: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Camping flavor
+  .camping-flavor{
+    .camping-flavor-content{
+      flex-direction: column;
+      .camping-flavor-item{
+        width: 100%;
+      }
+    }
+  }
+
+  .camping-contact {
+    .camping-contact-group {
+      .contact-content {
+
+      }
+    }
+  }
+
+  // Camping register
+  .camping-registration {
+    .camping-registration-content {
+      flex-direction: column;
+      .register-image{
+        display: none;
+      }
+      .register-form{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  // Custom Banner
+  .banner {
+    height: 500px;
+    .banner-wrap {
+      top: 100px;
+      left: 0;
+      img{
+        max-width: 150px;
+      }
+    }
+  }
+
+  // Mobile header
+  .navigation{
+    display: none;
+  }
+  .header-mobile {
+    display: block;
+    //position: absolute;
+    //top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 21;
+    top: 0;
+    overflow: hidden;
+    background-color: $green;
+    transition: transform 0.3s ease-in-out;
+
+    .navigation-wrap-mobile {
+      position: relative;
+
+      .navigation-left-mobile {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        .icon-menu-mobile {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .navigation-center-mobile {
+        display: flex;
+        justify-content: center;
+
+        .logo-mobile {
+          a{
+            img{
+              width: 100px;
+              height: 90px;
+            }
+          }
+        }
+      }
+
+      .navigation-right-mobile {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 12;
+        cursor: pointer;
+
+        .icon-close-menu-mobile {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .navigation-mobile {
+      display: none;
+
+      .navigation-list-mobile {
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 90px;
+
+        li {
+          border-bottom: 1px solid #ececec;
+          margin: 0;
+          width: 100%;
+
+          a {
+            padding: 15px 100px 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #757575;
+            display: block;
+            transition: 0.3s;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+        }
+        li:hover {
+          background-color: #f8d7da;
+          a:hover{
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    .show-nav-mobile {
+      display: block;
+    }
+  }
+  .header-mobile.hidden{
+    transform: translateY(-100%);
+  }
+
+  // Title
+  .camping-title{
+    h5{
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+    h1{
+      font-size: 32px;
+      letter-spacing: 3px;
+    }
+  }
+
+  // Camping info
+  .camping-info{
+    .camping-info-content{
+      flex-direction: column;
+      gap: 20px;
+      .camping-info-left, .camping-info-right{
+        width: 100%;
+      }
+      .camping-info-left{
+        align-items: center;
+      }
+    }
+  }
+
+  // Gallery
+  .camping-gallery{
+    .camping-horizontal-gallery{
+      .camping-image-list{
+        img{
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  // Camping memories
+  .camping-memories{
+    .camping-memories-center , .camping-memories-bot{
+      flex-direction: column;
+      align-items: center;
+      .left, .right{
+        width: 100%;
+      }
+    }
+  }
+
+  // Camping current
+  .camping-current{
+    .camping-current-list{
+      .camping-current-item{
+        .item-content{
+          .item-content-top{
+            h5{
+              font-size: 12px;
+            }
+            h3{
+              font-size: 24px;
+            }
+          }
+          .item-content-center{
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Camping flavor
+  .camping-flavor{
+    .camping-flavor-content{
+      .camping-flavor-item {
+        flex-direction: column;
+        text-align: center;
+        .flavor-image{
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  // Promo
+  .background-scroll {
+    min-height: 300px;
+  }
+  .promo-section{
+    .promo-title{
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+      }
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  // Camping current
+  .camping-current{
+    .camping-current-list{
+      .camping-current-item{
+        flex-direction: column;
+        .item-content, .item-image{
+          width: 100%;
+        }
+        .item-content{
+          order: 2;
+          .line{
+            width: 100%;
+          }
+        }
+        .item-image{
+          order: 1;
+        }
+      }
+    }
+  }
+
+  // Camping Flavor
+  .camping-flavor{
+    .camping-flavor-content{
+      flex-direction: column;
+      .camping-flavor-item{
+        margin: 15px 0;
+        width: 100%;
+        .flavor-content{
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // Camping Contact
+  .camping-contact{
+    .camping-contact-group{
+      flex-direction: column;
+      .contact-image, .contact-content{
+        width: 100%;
+      }
+      .contact-content{
+        padding: 60px 30px;
+        h2{
+          font-size: 24px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  // Camping registration
+  .camping-registration {
+    .camping-registration-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+      .register-image{
+        display: none;
+      }
+      .register-form{
+        padding: 10px;
+      }
+    }
+  }
+
+  // Thanks
+  .thanks{
+    .thanks-img{
+      .thanks-content{
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+}

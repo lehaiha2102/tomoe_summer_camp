@@ -1,0 +1,659 @@
+$black: #383838;
+$white: #FFF;
+$gray: #494343;
+$greyish: #979797;
+$darkBlack: #000;
+$grayMedium: #757575;
+$blue: #3f99bb;
+$green: rgb(77, 91, 42);
+$red-btn: rgb(181, 25, 31);
+
+$fs_title_large: 64px;
+$fs_subtitle_large: 18px;
+$fs_title_medium: 48px;
+$fs_subtitle_medium: 16px;
+$fs_title_small: 32px;
+$fs_subtitle_small: 14px;
+$fs_text: 18px;
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+img{
+  width: 100%;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+.header-mobile{
+  display: none;
+}
+.container{
+  overflow: hidden;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+}
+
+.camping-title{
+  h5{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: $fs_subtitle_large;
+    margin-bottom: 30px;
+  }
+  h1{
+    font-size: $fs_title_large;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+  }
+}
+
+// Navigation
+.navigation{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 11;
+  background-color: $green;
+  transition: transform 0.3s ease-in-out;
+  .navigation-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    .navigation-left{
+      .logo{
+        a{
+          img{
+            width: 100px;
+            height: 80px;
+          }
+        }
+      }
+    }
+    .navigation-right{
+      .navigation-list{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin: 0;
+        li{
+          padding-left: 80px;
+          a{
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+            text-shadow: 2px 2px 2px $black;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+          a:hover{
+            color: $blue;
+          }
+        }
+        li:last-child{
+          a{
+            padding: 10px 30px;
+            background-color: $red-btn;
+            color: $white;
+            text-shadow: none;
+          }
+          a:hover{
+            background-color: $white;
+            color: $red-btn;
+          }
+        }
+      }
+    }
+  }
+}
+.navigation.hidden{
+  transform: translateY(-100%);
+}
+
+// Custom Banner
+.banner {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  .banner-wrap {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    img{
+      max-width: 300px;
+    }
+  }
+}
+
+// Camping Info
+.camping-info{
+  padding: 100px 0;
+  .camping-info-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  .camping-info-right, .camping-info-left{
+    width: 48%;
+  }
+  .camping-info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    padding-left: 10px;
+    color: $green;
+    h1{
+      margin-bottom: 0;
+    }
+  }
+  .camping-info-right{
+    .camping-info-description{
+      p{
+        color: $green;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: justify;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
+
+// Gallery
+.camping-gallery{
+  margin-bottom: 100px;
+  .camping-horizontal-gallery{
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    .camping-image-list{
+      display: flex;
+      gap: 10px;
+      img{
+        width: 600px;
+        height: 500px;
+        display: inline-block;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+// Camping memories
+.camping-memories{
+  margin-bottom: 100px;
+  .camping-memories-top{
+    text-align: center;
+    margin-bottom: 60px;
+    color: $green;
+    p{
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: 3px;
+      font-weight: 400;
+      color: $green;
+    }
+  }
+  .camping-memories-center{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .camping-memories-bot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .camping-memories-center{
+    margin-bottom: 60px;
+    .left, .right{
+      width: 48%;
+    }
+    .left{
+      img{
+        width: 100%;
+      }
+    }
+    .right{
+      img{
+        max-width: 100%;
+      }
+      p{
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 3px;
+        color: $green;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+    }
+  }
+  .camping-memories-bot{
+    .left, .right{
+      width: 48%;
+    }
+    .left{
+      p{
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 3px;
+        color: $green;
+        text-align: justify;
+      }
+    }
+    .right{
+      img{
+        max-width: 100%;
+        height: 500px;
+      }
+    }
+  }
+}
+
+// Promo
+.background-scroll {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.background-scroll::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.promo-section {
+  .promo-title {
+    text-align: center;
+    color: $white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 64px;
+      font-weight: 700;
+      margin: 10px 0 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Camping curent
+.camping-current{
+  padding-top: 100px;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+  background-color: $green;
+  .camping-current-title{
+    text-align: center;
+    color: $white;
+    h1{
+      margin-bottom: 0;
+    }
+  }
+  .camping-current-list{
+    .camping-current-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 60px 0;
+      gap: 40px;
+      position: relative;
+      .item-image, .item-content{
+        width: 48%;
+      }
+      .item-image{
+        img{
+          box-shadow:1px 2px 6px rgba(0, 0, 0, 0.3);
+          max-width: 650px;
+        }
+      }
+      .item-content{
+        .item-content-top{
+          margin-bottom: 30px;
+          h5{
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 18px;
+            color: $white;
+          }
+          h3{
+            font-size: 48px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #EEC836;
+            letter-spacing: 6px;
+          }
+        }
+        .item-content-center{
+          margin-bottom: 30px;
+          margin-left: 15px;
+          p{
+            font-size: 20px;
+            color: $white;
+            font-weight: 400;
+            letter-spacing: 3px;
+          }
+        }
+        .item-content-bot{
+          .register-btn{
+            cursor: pointer;
+            padding: 15px 30px;
+            border: 1px;
+            text-align: center;
+            background-color: $red-btn;
+            a{
+              color: $white;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 20px;
+            }
+          }
+          .register-btn:hover{
+            background-color: $white;
+            a{
+              color: red;
+            }
+          }
+        }
+        .line{
+          position: absolute;
+          bottom: 0;
+          width: 48%;
+          height: 1px;
+          background: $white;
+          border-radius: 2px;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+// Camping Flavor
+.camping-flavor{
+  margin-bottom: 100px;
+  position: relative;
+  .camping-flavor-title{
+    text-align: center;
+    color: $green;
+    margin-bottom: 60px;
+    p{
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: 3px;
+      color: $green;
+    }
+  }
+  .camping-flavor-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    .camping-flavor-item{
+      display: flex;
+      width: 48%;
+      margin: 30px 0;
+      align-items: center;
+      img{
+        max-width: 240px;
+      }
+      .flavor-content{
+        h2{
+          font-size: 24px;
+          text-transform: uppercase;
+          color: $green;
+          font-weight: 700;
+          letter-spacing: 3px;
+        }
+        p{
+          font-size: 18px;
+          color: $green;
+          font-weight: 400;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+// Contact
+.camping-contact{
+  margin: 100px 0;
+  .camping-contact-group{
+    display: flex;
+    align-items: center;
+    background-color: $green;
+    .contact-image{
+      width: 50%;
+      img{
+        max-width: 100%;
+        height: 600px;
+      }
+    }
+    .contact-content{
+      width: 50%;
+      color: $white;
+      padding: 0 30px;
+      h2{
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 18px;
+        letter-spacing: 3px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: justify;
+      }
+        .contact-info{
+          margin: 30px 0;
+          p{
+            margin: 0;
+            a{
+              font-size: 18px;
+              line-height: 1.4;
+              letter-spacing: 3px;
+              color: $white;
+            }
+          }
+        }
+      .register-btn{
+        cursor: pointer;
+        padding: 15px 30px;
+        border: 1px;
+        text-align: center;
+        background-color: $red-btn;
+        a{
+          color: $white;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+      }
+      .register-btn:hover{
+        background-color: $white;
+        a{
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+// register
+.camping-registration{
+  .camping-registration-title{
+    color: $green;
+    text-align: center;
+  }
+  .camping-registration-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    box-shadow:1px 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 60px;
+    margin-bottom: 50px;
+    .register-form{
+      flex: 1;
+      padding: 20px;
+      .success-message{
+        font-size: 18px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 24px;
+        color: $green;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+          input[type='submit'] {
+            padding: 10px;
+            font-size: 18px;
+            color: $white;
+            background-color: $green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            width: 50%;
+            margin-top: 20px;
+          }
+          input[type='submit']:hover {
+            background-color: #285526;
+          }
+        }
+    }
+    .register-image {
+      flex: 1;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// Thanks
+.thanks{
+  margin-top: 50px;
+  .thanks-img{
+    position: relative;
+    //bottom: 48px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    .thanks-content{
+      text-align: center;
+      color: $green;
+      max-width: 1200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      p{
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 3px;
+        font-weight: 400;
+        color: $green;
+      }
+    }
+  }
+}
+
+// Footer
+.footer-custom{
+  .footer-copyright{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: $green;
+    width: 100%;
+    text-align: center;
+    h4{
+      margin: 0;
+      padding: 10px 0;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+    }
+  }
+}
