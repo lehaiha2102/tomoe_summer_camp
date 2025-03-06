@@ -332,15 +332,12 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    padding: 15px;
+    padding: 30px;
   }
   .camping-registration .camping-registration-content .register-image {
     display: none;
   }
   .camping-registration .camping-registration-content .register-form {
     padding: 10px;
-  }
-  .thanks .thanks-img .thanks-content {
-    width: 90%;
   }
 }
